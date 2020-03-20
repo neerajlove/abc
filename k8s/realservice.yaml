@@ -1,0 +1,10 @@
+apiversion: v1
+kind: service
+metadata:
+  name: realservice
+spec:
+  selector:
+    app: openmrs
+  type: loadbalancer
+  ports:
+    - port: 8080  

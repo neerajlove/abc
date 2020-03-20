@@ -1,0 +1,23 @@
+apiversion: extensions/vibeta1
+metadata: 
+  name: K8 openmrs webapp
+kind: deployment
+spec:
+  replicas: 2
+  minstarttime: 50
+  strategy:
+    type: RollingUpdate
+    RollingUpdate: 
+      maxUnavailable: 1
+      maxSurge: 1
+  template: 
+    metadata:
+      labels:
+        app: openmrs
+    spec:
+      containers:
+      image: openmrs
+      ports:
+        - containerport: 8080  
+            
+
