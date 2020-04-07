@@ -19,7 +19,7 @@ for tree in soup.find_all('tr'):
  #assume td as rows 
   for todd in tree.find_all('td'): 
      #print(todd.text) "appending data of td into array data made up there  "
-
+     
      data.append(todd.text)  
      print(data)
   csv_writer.writerow(data)  
